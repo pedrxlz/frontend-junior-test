@@ -1,0 +1,16 @@
+.add-token-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.page-title-container {
+  display: flex;
+  margin-left: 8px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  width: 490px;
+  align-self: center;
+}
