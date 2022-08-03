@@ -14,11 +14,29 @@ function Form() {
     watch,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => {
-    localStorage.setItem(
-      watch("token"),
-      JSON.stringify(parseFloat(watch("balance")))
-    );
+    console.log(data);
+
+    if (localStorage.getItem("id") === null) {
+      localStorage.setItem("id", 0);
+    }
+
+    function getNextId() {
+      let nextId = localStorage.getItem("id");
+      return parseInt(nextId) + 1;
+    }
+
+    let object = {
+      id: getNextId(),
+      tokenName: data.tokenName,
+      balanceValue: JSON.stringify(parseFloat(data.balanceValue)),
+    };
+
+    let id = getNextId();
+    localStorage.setItem(id, JSON.stringify(object));
+    localStorage.setItem("id", id);
+
     navigateTo("/");
   };
   console.log(watch("token"));
@@ -27,7 +45,7 @@ function Form() {
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
       <label>
         Token
-        <input type="text" {...register("token", { required: true })} />
+        <input type="text" {...register("tokenName", { required: true })} />
         {errors.token && (
           <span className="required">This field is required</span>
         )}
@@ -35,7 +53,7 @@ function Form() {
 
       <label>
         Balance
-        <input type="text" {...register("balance", { required: true })} />
+        <input type="text" {...register("balanceValue", { required: true })} />
         {errors.balance && (
           <span className="required">This field is required</span>
         )}
