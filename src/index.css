@@ -17,9 +17,14 @@
 }
 
 #root {
-  text-align: center;
+  width: 600px;
+  margin: 0 auto;
 }
 
 button {
   border: none;
+}
+
+ul {
+  list-style: none;
 }

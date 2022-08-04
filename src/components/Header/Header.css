@@ -1,9 +1,11 @@
 .header {
-  text-align: center;
+  width: 100%;
 }
 
 .logo {
-  height: 2.5em;
+  display: block;
+  margin: 0 auto;
+  height: 2.9em;
   padding: 2rem;
 }
 
@@ -13,14 +15,14 @@
 
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-  cursor: pointer;
 }
 
 .title-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  margin-right: 1.2vw;
 }
 
 .title-container img {
@@ -32,8 +34,13 @@
     brightness(111%) contrast(95%);
 }
 
-.title {
+span.title {
   font-weight: 700;
-  font-size: 2.3rem;
+  font-size: 2.3vw;
   padding-left: 5px;
+}
+
+div.title {
+  display: flex;
+  align-items: center;
 }

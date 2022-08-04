@@ -1,0 +1,26 @@
+.token-info-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.edit-token-icon {
+  font-size: 0.5vw !important;
+}
+
+.token-info-container div {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.token-info-container span {
+  font-size: 2.1vw;
+}
+
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}

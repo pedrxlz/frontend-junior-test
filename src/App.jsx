@@ -14,9 +14,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" exact element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/add-token" element={<AddToken />} />
-        <Route path="/edit-token" element={<EditToken />} />
+        <Route path="/edit-token/:id" element={<EditToken />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

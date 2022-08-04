@@ -9,8 +9,13 @@ function Button(props) {
 
   const style = location.pathname != "/" ? { display: "none" } : {};
 
+  // const oneClickCaptureHandler = () => {
+  //   props.
+  // }
+
   return (
     <button
+      onClickCapture={props.oneClickCaptureHandler}
       style={props.value != "Add Token" ? {} : style}
       className={props.className}
       type={props.type}
@@ -18,7 +23,7 @@ function Button(props) {
         if (props.goTo == "back") {
           navigateTo(-1);
         } else {
-          navigateTo(props.goTo);
+          props.goTo == "none" ? {} : navigateTo(props.goTo);
         }
       }}
     >

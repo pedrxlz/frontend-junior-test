@@ -18,7 +18,7 @@ function AddToken() {
         ></Button>
       </div>
 
-      <Form></Form>
+      <Form onEdit={false} />
     </div>
   );
 }

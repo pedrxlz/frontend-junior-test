@@ -1,48 +1,31 @@
 import React from "react";
-import { useEffect, useState } from "react";
 
 import Token from "../../components/Token/Token";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 import "./Home.css";
 
 function Home() {
-  const [tokens, setTokens] = useState([]);
-
-  const handleAddFriend = () => {
-    setTokens((prevToken) => [
-      ...prevToken,
-      {
-        name: "Random Friend Name",
-        age: 20, // Random age
-      },
-    ]);
-  };
-
-  useEffect(() => {
-    let id = localStorage.getItem("id");
-
-    for (let i = 1; i <= id; i++) {
-      let token = localStorage.getItem(i);
-
-      if (token === null) {
-        continue;
-      }
-      setTokens((prevToken) => [...prevToken, token]);
-    }
-  }, []);
-  return (
-    <ul>
-      {tokens.map((elem, index) => {
-        console.log(elem, index);
-        return (
-          <li key={index}>
-            <Token tokenJson={elem} />
+  const [tokens, setTokens] = useLocalStorage("tokens");
+  if (tokens) {
+    return (
+      <div className="container">
+        <ul>
+          <li className="subtitle-container">
+            <span className="token-name">Tokens</span>
+            <span className="token-balance">Balance</span>
           </li>
-        );
-      })}
-      {/* {console.log(tokens)} */}
-    </ul>
-  );
+          {tokens.map((elem, index) => {
+            return (
+              <li key={index}>
+                <Token id={index} name={elem.name} balance={elem.balance} />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
 }
 
 export default Home;

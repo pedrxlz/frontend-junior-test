@@ -11,8 +11,10 @@ export default () => (
   <div className="header">
     <img className="logo" src={kleverLogo} alt="klever-logo"></img>
     <div className="title-container">
-      <img src={shootingStar} className="filter-gold" alt="shooting-star" />
-      <span className="title">Wish Wallet</span>
+      <div className="title">
+        <img src={shootingStar} className="filter-gold" alt="shooting-star" />
+        <span className="title">Wish Wallet</span>
+      </div>
       <Button
         className="btn klever-primary-btn"
         id="add-token"
