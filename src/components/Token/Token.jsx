@@ -7,7 +7,7 @@ import editIcon from "../../assets/editsquare-icon.svg";
 import "./Token.css";
 
 function Token(props) {
-  const id = "/edit-token/" + props.id;
+  const id = "edit-token/" + props.id;
 
   return (
     <div className="token-info-container">

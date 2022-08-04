@@ -11,7 +11,7 @@ import Header from "./components/Header/Header";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="frontend-junior-test/">
       <Header />
       <Routes>
         <Route path="/" exact element={<Home />} />
