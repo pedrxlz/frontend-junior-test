@@ -50,7 +50,7 @@ function EditToken() {
 
   const removeToken = (tId) => {
     const newTokens = tokens.filter((t) => t.id != tId);
-    console.log(id);
+    console.log("id");
     setTokens(newTokens);
     setIsOpen(false);
     navigateTo("/");
@@ -91,7 +91,6 @@ function EditToken() {
           goTo={"back"}
         ></Button>
       </div>
-
       <Form onEdit={true}>
         <Button
           oneClickCaptureHandler={(e) => handleOpenModal()}

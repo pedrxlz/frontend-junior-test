@@ -4,10 +4,6 @@
   justify-items: center;
 }
 
-.edit-token-icon {
-  font-size: 0.5vw !important;
-}
-
 .token-info-container div {
   margin: 0 auto;
   padding: 20px;
@@ -17,7 +13,7 @@
 }
 
 .token-info-container span {
-  font-size: 2.1vw;
+  font-size: 2.1rem;
 }
 
 .filter-white {

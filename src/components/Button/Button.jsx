@@ -9,16 +9,12 @@ function Button(props) {
 
   const style = location.pathname != "/" ? { display: "none" } : {};
 
-  // const oneClickCaptureHandler = () => {
-  //   props.
-  // }
-
   return (
     <button
       onClickCapture={props.oneClickCaptureHandler}
       style={props.value != "Add Token" ? {} : style}
       className={props.className}
-      type={props.type}
+      type="button"
       onClick={() => {
         if (props.goTo == "back") {
           navigateTo(-1);

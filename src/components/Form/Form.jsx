@@ -11,7 +11,6 @@ function Form(props) {
 
   let { id } = useParams();
 
-  // let sameTokenWarn = false;
   const [tokenWarn, setTokenWarn] = useState(false);
 
   const onEdit = props.onEdit;
@@ -111,7 +110,9 @@ function Form(props) {
           <span className="required">This field is required</span>
         )}
       </label>
+
       <div className="delete-token">{props.children}</div>
+
       <input
         className="btn klever-primary-btn submit"
         type="submit"
