@@ -14,6 +14,8 @@ Project dependencies:
 
 - [ReactHookForm](https://react-hook-form.com/)
 
+- [ReactModal](http://reactcommunity.org/react-modal/)
+
 ## How to run
 
 Cloning repo
