@@ -21,13 +21,13 @@ Project dependencies:
 Cloning repo
 
 ```bash
-$ git clone https://github.com/pedrxlz/sisagri-challenge.git
+$ git clone https://github.com/pedrxlz/frontend-junior-test.git
 ```
 
 Acessing project directory
 
 ```bash
-$ cd sisagri-challenge
+$ cd frontend-junior-test
 ```
 
 Instaling project dependencies
